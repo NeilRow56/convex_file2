@@ -27,6 +27,7 @@ http.route({
           await ctx.runMutation(internal.users.createUser, {
             tokenIdentifier: `https://balanced-cod-16.clerk.accounts.dev |${result.data.id}`,
           })
+
           break
       }
 

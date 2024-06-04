@@ -4,6 +4,7 @@ import './globals.css'
 import { ThemeProvider } from '@/providers/ThemeProvider'
 import { ConvexClientProvider } from '@/providers/ConvexProvider'
 import { Toaster } from 'sonner'
+import { Header } from '@/components/Header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,7 +29,10 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Toaster richColors position="bottom-right" />
-            <main className="bg-background">{children}</main>
+            <main className="bg-background">
+              <Header />
+              {children}
+            </main>
           </ThemeProvider>
         </ConvexClientProvider>
       </body>
